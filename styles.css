@@ -1,0 +1,59 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+details {
+  width: 100%;
+  cursor: pointer;
+}
+
+summary {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://source.unsplash.com/1600x900/?landscape') center/cover no-repeat;
+  height: 400px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid white;
+}
+
+summary::marker {
+  display: none;
+}
+
+.scroll-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px;
+  background: #1e1e1e;
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-container div {
+  min-width: 300px;
+  height: 200px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  scroll-snap-align: center;
+}
+
+/* Optional: Hide scrollbar */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
